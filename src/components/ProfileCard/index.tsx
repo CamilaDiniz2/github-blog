@@ -1,35 +1,52 @@
 import {
-  ProfileCardContainer, 
-  ImageBox, 
-  ProfileInfoBox, 
-  ProfileInfoName,  
-  ProfileInfoCards
+  ProfileCardContainer,
+  ImageBox,
+  ProfileInfoBox,
+  ProfileInfoName,
+  ProfileInfoCards,
+  GithubLinkBox,
+  ProfileInfoBio,
 } from './styles'
 
-import {ArrowSquareOut} from 'phosphor-react'
+import {
+  FaShareSquare,
+  FaGithub,
+  FaBuilding,
+  FaUserFriends,
+} from 'react-icons/fa'
+import { useContext } from 'react'
+import { GithubApiContext } from '../../contexts/GithubApiContext'
 
-export function ProfileCard(){
+export function ProfileCard() {
+  const { personalGithubData } = useContext(GithubApiContext)
+  console.log(personalGithubData)
+
   return (
     <ProfileCardContainer>
-      <ImageBox src="https://github.com/camiladiniz2.png" />
-        
+      <ImageBox src={personalGithubData.avatar_url} />
+
       <ProfileInfoBox>
         <ProfileInfoName>
-          <strong>Camila Diniz</strong>
-          <a>
+          <strong>{personalGithubData.name}</strong>
+          <GithubLinkBox href={personalGithubData.html_url}>
             <span>github</span>
-            <ArrowSquareOut size={16} />
-          </a>
+            <FaShareSquare size={12} />
+          </GithubLinkBox>
         </ProfileInfoName>
-        <span>
-          Tristique volutpat pulvinar vel massa, pellentesque 
-          egestas. Eu viverra massa quam dignissim aenean malesuada suscipit. 
-          Nunc, volutpat pulvinar vel mass.
-        </span>
+        <ProfileInfoBio>{personalGithubData.bio}</ProfileInfoBio>
         <ProfileInfoCards>
-          <p>IFPE</p>
-          <p>Rocketseat</p>
-          <p>Seguidores</p>
+          <div>
+            <FaGithub size={16} />
+            <p>{personalGithubData.login}</p>
+          </div>
+          <div>
+            <FaBuilding size={16} />
+            <p>{personalGithubData.company}</p>
+          </div>
+          <div>
+            <FaUserFriends size={16} />
+            <p>{personalGithubData.followers} seguidores</p>
+          </div>
         </ProfileInfoCards>
       </ProfileInfoBox>
     </ProfileCardContainer>

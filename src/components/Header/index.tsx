@@ -1,8 +1,8 @@
-import {HeaderContainer} from './styles'
+import { HeaderContainer } from './styles'
 
 import logoGitHubBlog from '../../assets/logo.svg'
 
-export function Header(){
+export function Header() {
   return (
     <HeaderContainer>
       <img src={logoGitHubBlog} />

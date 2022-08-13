@@ -1,4 +1,4 @@
-import {createGlobalStyle} from 'styled-components'
+import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
   *{
@@ -9,7 +9,7 @@ export const GlobalStyle = createGlobalStyle`
 
   :focus{
     outline: 0;
-    box-shadow: 0 0 0 2px ${({ theme }) => theme['blue']};
+    box-shadow: 0 0 0 2px ${({ theme }) => theme.blue};
   }
 
   body{
@@ -24,5 +24,9 @@ export const GlobalStyle = createGlobalStyle`
 
   button{
     border: 0;
+  }
+
+  a{
+    text-decoration: none;
   }
 `

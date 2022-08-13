@@ -1,11 +1,12 @@
-import { Header } from "../../components/Header";
-import { ProfileCard } from "../../components/ProfileCard";
+import { Header } from '../../components/Header'
+import { ProfileCard } from '../../components/ProfileCard'
+import { HomeContainer } from './styles'
 
-export function Home(){
+export function Home() {
   return (
-    <div>
+    <HomeContainer>
       <Header />
       <ProfileCard />
-    </div>
+    </HomeContainer>
   )
 }

@@ -1,14 +1,16 @@
-import { ThemeProvider } from "styled-components";
-import { Home } from "./pages/Home";
-import { GlobalStyle } from "./styles/global";
-import { defaultTheme } from "./styles/themes/default";
+import { ThemeProvider } from 'styled-components'
+import { GithubApiProvider } from './contexts/GithubApiContext'
+import { Home } from './pages/Home'
+import { GlobalStyle } from './styles/global'
+import { defaultTheme } from './styles/themes/default'
 
 export function App() {
-    return (
+  return (
     <ThemeProvider theme={defaultTheme}>
-      <Home />
+      <GithubApiProvider>
+        <Home />
+      </GithubApiProvider>
       <GlobalStyle />
     </ThemeProvider>
   )
 }
-
