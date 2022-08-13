@@ -14,7 +14,7 @@ export const ProfileCardContainer = styled.div`
 
   border-radius: 10px;
 
-  @media (max-width: 833px) {
+  @media (max-width: 700px) {
     display: flex;
     flex-direction: column;
   }

@@ -23,6 +23,7 @@ interface GithubApiProviderProps {
 export function GithubApiProvider({ children }: GithubApiProviderProps) {
   const [personalGithubData, setPersonalGithubData] =
     useState<personalGithubDataProps>([])
+
   const username = 'camiladiniz2'
 
   async function loadPersonalGithubData() {
