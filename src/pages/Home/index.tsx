@@ -37,6 +37,8 @@ export function Home() {
     loadIssuesGithubApi()
   }, [])
 
+  const numberOfIssuesCreated = issuesGitHubRepository.length
+
   console.log(issuesGitHubRepository)
   return (
     <HomeContainer>
@@ -45,7 +47,7 @@ export function Home() {
       <HomeContent>
         <PublicationsInfoBox>
           <strong>Publicações</strong>
-          <span>0 publicações</span>
+          <span>{numberOfIssuesCreated} publicações</span>
         </PublicationsInfoBox>
 
         <SearchForm />

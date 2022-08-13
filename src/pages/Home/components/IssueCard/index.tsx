@@ -1,6 +1,6 @@
 import { IssueCardContainer, IssueTitle, IssueContent } from './styles'
 
-import { format, formatDistanceToNow } from 'date-fns'
+import { formatDistanceToNow } from 'date-fns'
 import ptBR from 'date-fns/locale/pt-BR'
 
 interface IssuesRepositoryProps {
@@ -10,12 +10,7 @@ interface IssuesRepositoryProps {
   createdAt: Date
 }
 
-export function IssueCard({
-  id,
-  title,
-  body,
-  createdAt,
-}: IssuesRepositoryProps) {
+export function IssueCard({ title, body, createdAt }: IssuesRepositoryProps) {
   const resumedBodyContent = body.toString().slice(0, 150)
   const dateFormatted = new Date(createdAt)
   console.log(dateFormatted)
