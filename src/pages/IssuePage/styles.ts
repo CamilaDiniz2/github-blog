@@ -51,5 +51,11 @@ export const IssueSecondaryInfo = styled.div`
   }
 `
 export const IssueContent = styled.div`
+  margin: 3rem auto;
   padding: 2.5rem 2rem;
+  background-color: ${(props) => props.theme['base-post']};
+  border-radius: 8px;
+  p {
+    line-height: 160%;
+  }
 `

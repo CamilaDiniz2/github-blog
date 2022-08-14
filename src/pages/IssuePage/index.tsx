@@ -1,3 +1,5 @@
+import { formatDistanceToNow } from 'date-fns'
+import { ptBR } from 'date-fns/locale'
 import { useEffect, useState } from 'react'
 import {
   FaCalendarAlt,
@@ -28,6 +30,7 @@ export function IssuePage() {
   const { id } = useParams()
   const [issue, setIssue] = useState<IssueProps>([])
   const [bodyContent, setBodyContent] = useState<string[]>([])
+  const [dateToNow, setDateToNow] = useState<string>('')
   const username = 'camiladiniz2'
   const repositoryName = 'github-blog'
 
@@ -39,8 +42,13 @@ export function IssuePage() {
     )
     const data = await response.json()
     const body = await data.body.split('\n')
+    const formattedDate = await formatDistanceToNow(new Date(data.created_at), {
+      locale: ptBR,
+      addSuffix: true,
+    })
     setIssue(data)
     setBodyContent(body)
+    setDateToNow(formattedDate)
   }
 
   useEffect(() => {
@@ -70,7 +78,7 @@ export function IssuePage() {
           </div>
           <div>
             <FaCalendarAlt size={16} />
-            <p>Ha 1 dia</p>
+            <span>{dateToNow}</span>
           </div>
           <div>
             <FaComment size={16} />
@@ -85,7 +93,12 @@ export function IssuePage() {
 
       <IssueContent>
         {bodyContent.map((content) => {
-          return <p key={content}>{content}</p>
+          return (
+            <div key={content}>
+              <p>{content}</p>
+              <p></p>
+            </div>
+          )
         })}
       </IssueContent>
     </IssuePrincipalCardContainer>
