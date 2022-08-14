@@ -1,15 +1,18 @@
+import { BrowserRouter } from 'react-router-dom'
+import { Router } from './Router'
 import { ThemeProvider } from 'styled-components'
-import { GithubApiProvider } from './contexts/GithubApiContext'
-import { Home } from './pages/Home'
+import { IssuesProvider } from './contexts/IssuesContext'
 import { GlobalStyle } from './styles/global'
 import { defaultTheme } from './styles/themes/default'
 
 export function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
-      <GithubApiProvider>
-        <Home />
-      </GithubApiProvider>
+      <BrowserRouter>
+        <IssuesProvider>
+          <Router />
+        </IssuesProvider>
+      </BrowserRouter>
       <GlobalStyle />
     </ThemeProvider>
   )

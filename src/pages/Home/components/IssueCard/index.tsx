@@ -1,32 +1,34 @@
-import { IssueCardContainer, IssueTitle, IssueContent } from './styles'
+import { IssueCardContainer, IssueTitle } from './styles'
 
 import { formatDistanceToNow } from 'date-fns'
 import ptBR from 'date-fns/locale/pt-BR'
+import { NavLink } from 'react-router-dom'
 
-interface IssuesRepositoryProps {
-  id: number
+interface IssueProps {
+  number: number
   title: string
   body: string
-  createdAt: Date
+  created_at: Date
+  html_url?: string
+  comments?: number
 }
 
-export function IssueCard({ title, body, createdAt }: IssuesRepositoryProps) {
+export function IssueCard({ number, title, body, created_at }: IssueProps) {
   const resumedBodyContent = body.toString().slice(0, 150)
-  const dateFormatted = new Date(createdAt)
-  console.log(dateFormatted)
-
-  const createdAtDateRelativeToNow = formatDistanceToNow(dateFormatted, {
+  const createdAtDateRelativeToNow = formatDistanceToNow(new Date(created_at), {
     locale: ptBR,
     addSuffix: true,
   })
 
   return (
     <IssueCardContainer>
-      <IssueTitle>
-        <strong>{title}</strong>
-        <span>{createdAtDateRelativeToNow}</span>
-      </IssueTitle>
-      <IssueContent>{resumedBodyContent}...</IssueContent>
+      <NavLink to={`/issues/${number}`}>
+        <IssueTitle>
+          <strong>{title}</strong>
+          <span>{createdAtDateRelativeToNow}</span>
+        </IssueTitle>
+        <p>{resumedBodyContent}...</p>
+      </NavLink>
     </IssueCardContainer>
   )
 }

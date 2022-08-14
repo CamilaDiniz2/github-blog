@@ -28,7 +28,7 @@ export const HomeContent = styled.div`
   width: 100%;
   max-width: 892px;
   margin: 0 auto;
-  margin-top: 1rem;
+  margin-top: 2rem;
 
   @media (max-width: 912px) {
     padding: 0 2rem;
