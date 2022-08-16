@@ -4,7 +4,8 @@
 
 1. Introdução
 2. Ferramentas utilizadas
-3. Desenvolvimento
+3. Setup
+4. Desenvolvimento
 
 ## 1. Introdução
 
@@ -18,4 +19,16 @@ Neste projeto serão usadas as seguintes ferramentas/bibliotecas/conceitos:
 - Roteamento e React Router DOM
 - Formulários
 
-### 3. Desenvolvimento
+### 3. Setup
+
+3.1 Acesse o seguinte link: [Github-blog](https://github.com/CamilaDiniz2/github-blog)
+
+3.2 Clique em "Use this template"
+
+3.3 Faça um clone do repositório
+
+3.4 E para baixar todas s dependencia digite "npm install"
+
+### 4. Desenvolvimento
+
+4.1 A tela de Home
