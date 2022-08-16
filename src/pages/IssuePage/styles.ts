@@ -51,9 +51,8 @@ export const IssueSecondaryInfo = styled.div`
   }
 `
 export const IssueContent = styled.div`
-  margin: 3rem auto;
-  padding: 2.5rem 2rem;
-  background-color: ${(props) => props.theme['base-post']};
+  margin: 2rem auto;
+  padding: 1.5rem 2rem;
   border-radius: 8px;
   p {
     line-height: 160%;

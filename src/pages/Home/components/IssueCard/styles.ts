@@ -8,6 +8,12 @@ export const IssueCardContainer = styled.div`
   padding: 2rem;
   cursor: pointer;
 
+  h5 {
+    margin-top: 2rem;
+    font-size: 0.875rem;
+    color: ${(props) => props.theme['base-label']};
+  }
+
   &:hover {
     border: 2px solid ${(props) => props.theme['base-label']};
     transition: border 0.2s;

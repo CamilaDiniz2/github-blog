@@ -96,7 +96,6 @@ export function IssuePage() {
           return (
             <div key={content}>
               <p>{content}</p>
-              <p></p>
             </div>
           )
         })}

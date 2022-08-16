@@ -28,6 +28,7 @@ export function IssueCard({ number, title, body, created_at }: IssueProps) {
           <span>{createdAtDateRelativeToNow}</span>
         </IssueTitle>
         <p>{resumedBodyContent}...</p>
+        <h5>Ver mais ...</h5>
       </NavLink>
     </IssueCardContainer>
   )
