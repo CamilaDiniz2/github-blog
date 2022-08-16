@@ -42,12 +42,25 @@ export const IssueSecondaryInfo = styled.div`
 
   margin-top: 1rem;
 
+  @media (max-width: 512px) {
+    justify-content: center;
+  }
+
   div {
     display: flex;
     justify-content: flex-start;
     align-items: center;
 
     gap: 0.5rem;
+
+    @media (max-width: 512px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    span {
+      text-align: center;
+    }
   }
 `
 export const IssueContent = styled.div`

@@ -32,3 +32,16 @@ Neste projeto serão usadas as seguintes ferramentas/bibliotecas/conceitos:
 ### 4. Desenvolvimento
 
 4.1 A tela de Home
+As telas foram criadas para ter um comportamento responsivo como é possível observar nas imagens de um desktop e em uma tela mobile.
+![Tela de Home Desktop](images/home-desktop.png)
+
+<center>Tela de Home - Desktop</center>
+
+![Tela de Home Mobile](images/home-mobile.png)<center>Tela de Home - Mobile</center>
+
+4.2 Tela para especificar uma Issue
+Nesta tela também foram criadas páginas responsivas.
+
+![Issue Page -Desktop](images/issue-page-desktop.png)<center>Tela de especificação de uma Issue - Desktop</center>
+
+![Issue Page - Mobile](images/issue-page-mobile.png)<center>Tela de especificação de uma Issue - Mobile</center>

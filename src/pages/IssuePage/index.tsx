@@ -74,7 +74,7 @@ export function IssuePage() {
         <IssueSecondaryInfo>
           <div>
             <FaGithub size={16} />
-            <p>{username}</p>
+            <span>{username}</span>
           </div>
           <div>
             <FaCalendarAlt size={16} />
@@ -82,11 +82,11 @@ export function IssuePage() {
           </div>
           <div>
             <FaComment size={16} />
-            <p>
+            <span>
               {issue.comments}
               {issue.comments === 1 && ' comentário'}
               {issue.comments !== 1 && ' comentários'}
-            </p>
+            </span>
           </div>
         </IssueSecondaryInfo>
       </IssueCardInfo>
