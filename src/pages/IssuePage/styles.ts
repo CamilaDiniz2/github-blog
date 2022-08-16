@@ -71,3 +71,35 @@ export const IssueContent = styled.div`
     line-height: 160%;
   }
 `
+
+export const IssueNotFoundPage = styled.div`
+  margin: 0 auto;
+  text-align: center;
+
+  background-color: ${(props) => props.theme['base-profile']};
+  border-radius: 10px;
+  padding: 2.5rem 2rem;
+
+  nav {
+    text-align: left;
+
+    a {
+      color: ${(props) => props.theme.blue};
+      line-height: 0;
+
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 8px;
+    }
+  }
+
+  h1 {
+    margin-top: 2rem;
+  }
+
+  div {
+    max-width: 200px;
+    margin: 1rem auto;
+  }
+`
